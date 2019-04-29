@@ -5,14 +5,19 @@
  	<meta charset="utf-8">
  	<title></title>
  	<style>
- 	html, body{padding:0;margin:0; font-size:14px;}
-  	nav{background:red; height:10vh; width:100%; position:fixed; display: flex;}
-  	main{display:flex;flex-direction: row; padding-top:10vh;}
-  	#main_video{background:yellow; width:67%; }
-  	#video{padding:20px; height:50vh;}
-  	#main_video iframe{width:100%; height:100%;}
-  	#sidebar{background:orange; width:33%; min-height:50vh;}
+ 	html, body{padding:0;margin:0; font-size:13px;}
+ 	body{font-family:sans-serif;}
+  	nav{height:8vh; width:100%; position:fixed; display: flex; background:white;}
 
+  	main{display:flex;flex-direction: row; padding-top:10vh;}
+  	#main_video{width:67%; }
+  	#video{padding:20px; height:70vh;}
+  	#main_video iframe{width:100%; height:100%;}
+  	#sidebar{width:33%;}
+
+
+  	#info{padding:20px;}
+  	#info h1{font-size:18px; font-weight:normal;}
 
   	ul{
   		list-style:none;
@@ -28,9 +33,9 @@
   	#sidebar a{
   		display:flex;
   	}
-  	#sidebar a img{width:50%; padding:5px;}
+  	
   	#sidebar a > div{width:50%; padding:5px;}
-
+  	#sidebar a img{width:90%;}
 	nav form {
 		display: flex;
 		width: 100%;
@@ -52,6 +57,20 @@
 		right: 10px;
 		align-self: center;
 	}
+	#youtube{
+		position:absolute;
+		left:20px;
+		align-self:center;
+	}
+	#youtube img{width:70px;}
+	#nav_buttons img{width:20px;}
+	#nav_buttons a{margin:0 10px;}
+
+	#more_info{border-top:1px solid #ccc; display:flex;}
+	#more_info > div:nth-child(1){width:10%;}
+	#more_info > div:nth-child(2){width:60%;}
+	#more_info > div:nth-child(3){width:30%;}
+	#more_info_p{padding-left:10%;}
 
   </style>
 </head>
@@ -59,15 +78,20 @@
 <body>
 
 <nav>
+	<div id="youtube">
+		<a href="http://youtube.com">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/1280px-Logo_of_YouTube_%282015-2017%29.svg.png"/>
+		</a>
+	</div>
 	<form>
 		<input type="text">
 		<button>Search</button>
 	</form>
 
 	<div id="nav_buttons">
-		<a><img src="https://image.flaticon.com/icons/svg/149/149101.svg"></a>
-		<a><img src="https://image.flaticon.com/icons/svg/149/149945.svg"></a>
-		<a><img src="https://image.flaticon.com/icons/svg/633/633816.svg"></a>
+		<a href="http://youtube.com"><img src="https://image.flaticon.com/icons/svg/149/149101.svg"></a>
+		<a href="http://youtube.com"><img src="https://image.flaticon.com/icons/svg/149/149945.svg"></a>
+		<a href="http://youtube.com"><img src="https://image.flaticon.com/icons/svg/633/633816.svg"></a>
 	</div>
 
 </nav>
@@ -75,26 +99,82 @@
 <main>
 	<div id="main_video">
 		<div id="video"><iframe  src="https://www.youtube.com/embed/V74l_zS1x8E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-		<div id="info">Extra Info</div>
+		
+		<div id="info">
+			<h1>Contributing to Open Source Part I: The Easy Way</h1>
+			<p>48,184 views</p>
+			<div id="more_info">
+				<div><img src="" /></div>
+				<div>
+					<p><a>The Odin Project</a></p>
+					<p>Publihsed on Feb 27, 2014</p>
+				</div>
+				<div><a id="sub">Subscribe</a></div>
+			</div>
+				
+
+				<p id="more_info_p">How do you contribute to open source?  In this video, I'll describe the easiest way to make a simple contribution to an open source project -- without using the command line, a text editor, "forking a repo", or even touching Git outside of Github.  I'll also describe what kinds of contributions open </p>
+			
+		</div>
 	</div>
 	<div id="sidebar">
 		<ul>
 			<li>
 				<a href="http://youtube.com">
-					<img src="https://i.imgur.com/ltiAyvy.png"/>
+					<div><img src="https://i.imgur.com/ltiAyvy.png"/></div>
 					<div>
-						<h1>Video title 1</h1>
-						<p>Subtitle</p>
+						<h1>Contributing to Open Source Part II: The Real Way</h1>
+						<p>The Odin Project</p>
 						<p>50 views</p>
 					</div>
 				</a>
 			</li>
 			<li>
 				<a href="http://youtube.com">
-					<img src="https://i.imgur.com/ltiAyvy.png"/>
+					<div><img src="https://i.imgur.com/ltiAyvy.png"/></div>
 					<div>
-						<h1>Video title 1</h1>
-						<p>Subtitle</p>
+						<h1>Contributing to Open Source Part II: The Real Way</h1>
+						<p>The Odin Project</p>
+						<p>50 views</p>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="http://youtube.com">
+					<div><img src="https://i.imgur.com/ltiAyvy.png"/></div>
+					<div>
+						<h1>Contributing to Open Source Part II: The Real Way</h1>
+						<p>The Odin Project</p>
+						<p>50 views</p>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="http://youtube.com">
+					<div><img src="https://i.imgur.com/ltiAyvy.png"/></div>
+					<div>
+						<h1>Contributing to Open Source Part II: The Real Way</h1>
+						<p>The Odin Project</p>
+						<p>50 views</p>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="http://youtube.com">
+					<div><img src="https://i.imgur.com/ltiAyvy.png"/></div>
+					<div>
+						<h1>Contributing to Open Source Part II: The Real Way</h1>
+						<p>The Odin Project</p>
+						<p>50 views</p>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="http://youtube.com">
+					<div><img src="https://i.imgur.com/ltiAyvy.png"/></div>
+					<div>
+						<h1>Contributing to Open Source Part II: The Real Way</h1>
+						<p>The Odin Project</p>
 						<p>50 views</p>
 					</div>
 				</a>
