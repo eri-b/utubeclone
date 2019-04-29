@@ -4,17 +4,16 @@
 <head>
  	<meta charset="utf-8">
  	<title></title>
- 	<style>
+ 	<style>	
  	html, body{padding:0;margin:0; font-size:13px;}
  	body{font-family:sans-serif;}
-  	nav{height:8vh; width:100%; position:fixed; display: flex; background:white;}
+  	nav{height:8vh; width:100%; position:fixed; display: flex; background:rgba(255, 255, 255, 0.98); box-shadow: 0 2px 2px rgb(228, 228, 228)}
 
   	main{display:flex;flex-direction: row; padding-top:10vh;}
   	#main_video{width:67%; }
   	#video{padding:20px; height:70vh;}
   	#main_video iframe{width:100%; height:100%;}
   	#sidebar{width:33%;}
-
 
   	#info{padding:20px;}
   	#info h1{font-size:18px; font-weight:normal;}
@@ -49,7 +48,7 @@
 	}
 
 	nav form button {
-		height: 30px;
+		height: 29px;
 	}
 
 	#nav_buttons {
@@ -72,6 +71,53 @@
 	#more_info > div:nth-child(3){width:30%;}
 	#more_info_p{padding-left:10%;}
 
+	#search_button {
+		border: 1px solid #d3d3d3;
+		background-color: #f8f8f8;
+		border-radius: 3%;
+		cursor: pointer;
+		transition: opacity 0.5s;
+		opacity: 1;
+	}
+
+	#search_button:hover {
+		opacity: 0.7;
+	}
+
+	form input {
+		border: 1px solid #d3d3d3;
+	}
+
+	*{box-sizing:border-box;}
+
+	#sub {
+		background-color: red;
+		padding: 15px 20px;
+		color: white;
+		margin-top: 15px;
+		border-radius: 3%;
+		font-size: 14px;
+		text-transform: uppercase;
+		display: inline-block;
+		cursor: pointer;
+		opacity: 1;
+		transition: opacity 0.5s;
+	}
+
+	#sub:hover {
+		opacity: 0.7;
+	}
+
+	.nav_button {
+			opacity: 0.6;
+			transition: opacity 0.4s;	
+	}
+
+	.nav_button:hover {
+		opacity: 1;
+	}
+
+
   </style>
 </head>
   
@@ -85,13 +131,13 @@
 	</div>
 	<form>
 		<input type="text">
-		<button>Search</button>
+		<button id="search_button">Search</button>
 	</form>
 
 	<div id="nav_buttons">
-		<a href="http://youtube.com"><img src="https://image.flaticon.com/icons/svg/149/149101.svg"></a>
-		<a href="http://youtube.com"><img src="https://image.flaticon.com/icons/svg/149/149945.svg"></a>
-		<a href="http://youtube.com"><img src="https://image.flaticon.com/icons/svg/633/633816.svg"></a>
+		<a href="http://youtube.com"><img class="nav_button" src="https://image.flaticon.com/icons/svg/149/149101.svg"></a>
+		<a href="http://youtube.com"><img class="nav_button" src="https://image.flaticon.com/icons/svg/149/149945.svg"></a>
+		<a href="http://youtube.com"><img class="nav_button" src="https://image.flaticon.com/icons/svg/633/633816.svg"></a>
 	</div>
 
 </nav>
