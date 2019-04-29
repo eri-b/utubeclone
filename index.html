@@ -1,140 +1,10 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 <head>
  	<meta charset="utf-8">
- 	<title></title>
- 	<style>	
- 	html, body{padding:0;margin:0; font-size:13px;}
- 	body{font-family:sans-serif;}
-  	nav{height:8vh; width:100%; position:fixed; display: flex; background:rgba(255, 255, 255, 0.98); box-shadow: 0 2px 2px rgb(228, 228, 228)}
-
-  	main{display:flex;flex-direction: row; padding-top:10vh;}
-  	#main_video{width:67%; }
-  	#video{padding:20px; height:70vh;}
-  	#main_video iframe{width:100%; height:100%;}
-  	#sidebar{width:33%;}
-
-  	#info{padding:20px;}
-  	#info h1{font-size:18px; font-weight:normal;}
-
-  	ul{
-  		list-style:none;
-  		margin:0;
-  		padding:0;
-  	}
-
-  	a{color:inherit; text-decoration:none;}
-  	#sidebar{padding:10px;}
-  	#sidebar h1{
-  		font-size:14px;
-  	}
-  	#sidebar a{
-  		display:flex;
-  	}
-  	
-  	#sidebar a > div{width:50%; padding:5px;}
-  	#sidebar a img{width:90%;}
-	nav form {
-		display: flex;
-		width: 100%;
-		justify-content: center;
-		align-items: center;
-	}
-
-	nav form input {
-		width: 400px;
-		height: 25px;
-	}
-
-	nav form button {
-		height: 25px;
-	}
-
-	#nav_buttons {
-		position: absolute;
-		right: 10px;
-		align-self: center;
-	}
-	#youtube{
-		position:absolute;
-		left:20px;
-		align-self:center;
-	}
-	#youtube img{width:70px;}
-	#nav_buttons img{width:20px;}
-	#nav_buttons a{margin:0 10px;}
-
-	#more_info{border-top:1px solid #ccc; display:flex;}
-	#more_info > div:nth-child(1){width:10%;}
-	#more_info > div:nth-child(2){width:60%;}
-	#more_info > div:nth-child(3){width:30%;}
-	#more_info_p{
-		padding-left:10%; 
-		padding-right:15%;
-		line-height:18px;
-		font-size:14px;
-
-	}
-	#more_info img{
-		border-radius: 24px;
-		margin-top:10px;
-	}
-
-	#search_button {
-		border: 1px solid #d3d3d3;
-		background-color: #f8f8f8;
-		border-radius: 3%;
-		cursor: pointer;
-		transition: opacity 0.5s;
-		opacity: 1;
-	}
-
-	#search_button:hover {
-		opacity: 0.7;
-	}
-
-	form input {
-		border: 1px solid #d3d3d3;
-	}
-
-	*{box-sizing:border-box;}
-
-	#sub {
-		background-color: red;
-		padding: 15px 20px;
-		color: white;
-		margin-top: 15px;
-		border-radius: 3%;
-		font-size: 14px;
-		text-transform: uppercase;
-		display: inline-block;
-		cursor: pointer;
-		opacity: 1;
-		transition: opacity 0.5s;
-		float:right;
-	}
-
-	#sub:hover {
-		opacity: 0.7;
-	}
-
-	.nav_button {
-			opacity: 0.6;
-			transition: opacity 0.4s;	
-	}
-
-	.nav_button:hover {
-		opacity: 1;
-	}
-
-	#publish{color:gray; margin-top:2px;}
-	#user{
-		margin-bottom: 0;
-    	font-size: 14px;
-    	font-weight:600;
-	}
-  </style>
+ 	<title>Youtube Clone</title>
+ 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
   
 <body>
@@ -142,7 +12,7 @@
 <nav>
 	<div id="youtube">
 		<a href="http://youtube.com">
-			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/1280px-Logo_of_YouTube_%282015-2017%29.svg.png"/>
+			<img alt="youtube" src="images/youtube.png"/>
 		</a>
 	</div>
 	<form>
@@ -151,39 +21,63 @@
 	</form>
 
 	<div id="nav_buttons">
-		<a href="http://youtube.com"><img class="nav_button" src="https://image.flaticon.com/icons/svg/149/149101.svg"></a>
-		<a href="http://youtube.com"><img class="nav_button" src="https://image.flaticon.com/icons/svg/149/149945.svg"></a>
-		<a href="http://youtube.com"><img class="nav_button" src="https://image.flaticon.com/icons/svg/633/633816.svg"></a>
+		<a href="http://youtube.com"><img class="nav_button" alt="bell" src="images/bell.svg"></a>
+		<a href="http://youtube.com"><img class="nav_button" alt="camera" src="images/camera.svg"></a>
+		<a href="http://youtube.com"><img class="nav_button" alt="menu" src="images/menu.svg"></a>
 	</div>
 
 </nav>
 
 <main>
 	<div id="main_video">
-		<div id="video"><iframe  src="https://www.youtube.com/embed/V74l_zS1x8E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+		<div id="video"><iframe  src="https://www.youtube.com/embed/V74l_zS1x8E" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 		
 		<div id="info">
 			<h1>Contributing to Open Source Part I: The Easy Way</h1>
 			<p>48,184 views</p>
 			<div id="more_info">
-				<div><img src="https://yt3.ggpht.com/a-/AAuE7mAQCEFKh8QB8lRzSKRTGoHow6vw53Va02X8Gg=s48-mo-c-c0xffffffff-rj-k-no" /></div>
+				<div><img alt="userpic" src="images/user.jpg" /></div>
 				<div>
-					<p id="user"><a>The Odin Project</a></p>
-					<p id="publish">Published on Feb 27, 2014</p>
+					<p class="user"><a>The Odin Project</a></p>
+					<p class="publish">Published on Feb 27, 2014</p>
 				</div>
 				<div><a id="sub">Subscribe</a></div>
 			</div>
 				
 
-				<p id="more_info_p">How do you contribute to open source?  In this video, I'll describe the easiest way to make a simple contribution to an open source project -- without using the command line, a text editor, "forking a repo", or even touching Git outside of Github.  I'll also describe what kinds of contributions open </p>
+			<p id="more_info_p">How do you contribute to open source?  In this video, I'll describe the easiest way to make a simple contribution to an open source project -- without using the command line, a text editor, "forking a repo", or even touching Git outside of Github.  I'll also describe what kinds of contributions open </p>
 			
+		</div>
+		<div id="comments">
+			<h1>435 Comments</h1>
+			<div class="comment_section">
+				<div><img alt="userpic" src="images/user.jpg" /></div>
+				<div>
+					<p class="username"><a class="user">Person 1</a><span class="publish">2 days ago</span></p>
+					<p class="">Epic clip bro. Love your surfing, fishing and faith. Enjoyed reading your testimony in the comments below too. Powerful stuff!﻿</p>
+				</div>
+			</div>
+			<div class="comment_section">
+				<div><img alt="userpic" src="images/user.jpg" /></div>
+				<div>
+					<p class="username"><a class="user">Person 2</a><span class="publish">2 days ago</span></p>
+					<p class="">Epic clip bro. Love your surfing, fishing and faith. Enjoyed reading your testimony in the comments below too. Powerful stuff!﻿</p>
+				</div>
+			</div>
+			<div class="comment_section">
+				<div><img alt="userpic" src="images/user.jpg" /></div>
+				<div>
+					<p class="username"><a class="user">Person 3</a><span class="publish">2 days ago</span></p>
+					<p class="">Epic clip bro. Love your surfing, fishing and faith. Enjoyed reading your testimony in the comments below too. Powerful stuff!﻿</p>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div id="sidebar">
 		<ul>
 			<li>
 				<a href="http://youtube.com">
-					<div><img src="https://i.imgur.com/ltiAyvy.png"/></div>
+					<div><img alt="thumbnail" src="images/thumb.png"/></div>
 					<div>
 						<h1>Contributing to Open Source Part II: The Real Way</h1>
 						<p>The Odin Project</p>
@@ -193,7 +87,7 @@
 			</li>
 			<li>
 				<a href="http://youtube.com">
-					<div><img src="https://i.imgur.com/ltiAyvy.png"/></div>
+					<div><img alt="thumbnail" src="images/thumb.png"/></div>
 					<div>
 						<h1>Contributing to Open Source Part II: The Real Way</h1>
 						<p>The Odin Project</p>
@@ -203,7 +97,7 @@
 			</li>
 			<li>
 				<a href="http://youtube.com">
-					<div><img src="https://i.imgur.com/ltiAyvy.png"/></div>
+					<div><img alt="thumbnail" src="images/thumb.png"/></div>
 					<div>
 						<h1>Contributing to Open Source Part II: The Real Way</h1>
 						<p>The Odin Project</p>
@@ -213,7 +107,7 @@
 			</li>
 			<li>
 				<a href="http://youtube.com">
-					<div><img src="https://i.imgur.com/ltiAyvy.png"/></div>
+					<div><img alt="thumbnail" src="images/thumb.png"/></div>
 					<div>
 						<h1>Contributing to Open Source Part II: The Real Way</h1>
 						<p>The Odin Project</p>
@@ -223,7 +117,7 @@
 			</li>
 			<li>
 				<a href="http://youtube.com">
-					<div><img src="https://i.imgur.com/ltiAyvy.png"/></div>
+					<div><img alt="thumbnail" src="images/thumb.png"/></div>
 					<div>
 						<h1>Contributing to Open Source Part II: The Real Way</h1>
 						<p>The Odin Project</p>
@@ -233,7 +127,7 @@
 			</li>
 			<li>
 				<a href="http://youtube.com">
-					<div><img src="https://i.imgur.com/ltiAyvy.png"/></div>
+					<div><img alt="thumbnail" src="images/thumb.png"/></div>
 					<div>
 						<h1>Contributing to Open Source Part II: The Real Way</h1>
 						<p>The Odin Project</p>
