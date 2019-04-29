@@ -48,7 +48,7 @@
 	}
 
 	nav form button {
-		height: 29px;
+		height: 25px;
 	}
 
 	#nav_buttons {
@@ -69,7 +69,17 @@
 	#more_info > div:nth-child(1){width:10%;}
 	#more_info > div:nth-child(2){width:60%;}
 	#more_info > div:nth-child(3){width:30%;}
-	#more_info_p{padding-left:10%;}
+	#more_info_p{
+		padding-left:10%; 
+		padding-right:15%;
+		line-height:18px;
+		font-size:14px;
+
+	}
+	#more_info img{
+		border-radius: 24px;
+		margin-top:10px;
+	}
 
 	#search_button {
 		border: 1px solid #d3d3d3;
@@ -102,6 +112,7 @@
 		cursor: pointer;
 		opacity: 1;
 		transition: opacity 0.5s;
+		float:right;
 	}
 
 	#sub:hover {
@@ -117,7 +128,12 @@
 		opacity: 1;
 	}
 
-
+	#publish{color:gray; margin-top:2px;}
+	#user{
+		margin-bottom: 0;
+    	font-size: 14px;
+    	font-weight:600;
+	}
   </style>
 </head>
   
@@ -150,10 +166,10 @@
 			<h1>Contributing to Open Source Part I: The Easy Way</h1>
 			<p>48,184 views</p>
 			<div id="more_info">
-				<div><img src="" /></div>
+				<div><img src="https://yt3.ggpht.com/a-/AAuE7mAQCEFKh8QB8lRzSKRTGoHow6vw53Va02X8Gg=s48-mo-c-c0xffffffff-rj-k-no" /></div>
 				<div>
-					<p><a>The Odin Project</a></p>
-					<p>Publihsed on Feb 27, 2014</p>
+					<p id="user"><a>The Odin Project</a></p>
+					<p id="publish">Published on Feb 27, 2014</p>
 				</div>
 				<div><a id="sub">Subscribe</a></div>
 			</div>
